@@ -87,7 +87,7 @@ public class JavaBinaryTree {
 	
 	public static void main(String args[])
 	{
-		JavaBinaryTree g = new JavaBinaryTree("G");
+		/*JavaBinaryTree g = new JavaBinaryTree("G");
 		JavaBinaryTree d = new JavaBinaryTree("D",null,g);
 		JavaBinaryTree e = new JavaBinaryTree("E");
 		JavaBinaryTree b = new JavaBinaryTree("B",d,e);
@@ -95,13 +95,38 @@ public class JavaBinaryTree {
 		JavaBinaryTree i = new JavaBinaryTree("I");
 		JavaBinaryTree f = new JavaBinaryTree("F",h,i);
 		JavaBinaryTree c = new JavaBinaryTree("C",f,null);
-		JavaBinaryTree a = new JavaBinaryTree("A",b,c);
+		JavaBinaryTree a = new JavaBinaryTree("A",b,c);*/
+		
+		//symmetric binary tree
+		//leaves 
+		JavaBinaryTree c1 = new JavaBinaryTree("3");
+		JavaBinaryTree c2 = new JavaBinaryTree("4");
+		JavaBinaryTree d1 = new JavaBinaryTree("3");
+		JavaBinaryTree d2 = new JavaBinaryTree("4");
+		
+		//internal nodes
+		JavaBinaryTree b1 = new JavaBinaryTree("2", c1, c2);
+		JavaBinaryTree b2 = new JavaBinaryTree("2", d1, d2);
+		
+		//root
+		JavaBinaryTree a = new JavaBinaryTree("1", b1, b2);
+		
+		//unbalanced binary tree
+		JavaBinaryTree c11 = new JavaBinaryTree("3");
+		JavaBinaryTree d11 = new JavaBinaryTree("3");
+		
+		JavaBinaryTree b11 = new JavaBinaryTree("2",null,c11);
+		JavaBinaryTree b12 = new JavaBinaryTree("2",null,d11);
+		
+		JavaBinaryTree a1 = new JavaBinaryTree("1",b11,b12);
+		
+	
 		
 		//System.out.printf("%s", a);
 		
 		//preOrderTraversal(a);
 		//postOrderTraversal(a);
-		inOrderTraversal(a);
+		inOrderTraversal(a1);
 		
 	}
 }
