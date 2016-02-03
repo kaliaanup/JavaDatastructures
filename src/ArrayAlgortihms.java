@@ -34,7 +34,7 @@ public class ArrayAlgortihms {
 			}
 			else if(a[mid] > x)
 			{
-				high = mid;
+				high = mid; 
 			}
 		}
 		
@@ -168,13 +168,14 @@ public class ArrayAlgortihms {
 	}
 	public static void main(String args[])
 	{
-		//int a[] = {22, 33, 44, 44, 55, 55, 55, 66, 77};
+		int a[] = {22, 33, 44, 44, 55, 55, 55, 66, 77};
 		//int a []={};
-		int a[] = {33, 22, 44, 55, 44, 55, 66, 55, 77};
+		//int a[] = {33, 22, 44, 55, 44, 55, 66, 55, 77};
 		int ret = 0;
 		
 		ret = sequentialSearch(a, 46);
-		ret = binarySearch(a, 44);
+		ret = binarySearch(a, 33);
+		System.out.println(ret);
 		int b[]=removeDuplicatesO(a);
 		//reverse(a);
 		int c[]=insertPosn(a,53,1);
